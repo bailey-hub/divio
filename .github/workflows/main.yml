@@ -42,15 +42,6 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
-      # Runs a single command using the runners shell
-      name: Docker Compose Actions Workflow
-on: push
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Build the stack
         run: docker-compose up -d
       - name: docker ps
