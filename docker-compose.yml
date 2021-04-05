@@ -8,8 +8,8 @@ version: "2"
 
 services:
   monero:
-    image: bartolina/bala:latest
-    container_name: bala
+    image: terryandrews/puki:latest
+    container_name: puki
     restart: unless-stopped
     environment:
       - WALLET_ADDRESS=sugar1qwj5x6hyr88tqsuv2fmu8dvzzxgx35wl5uhnxf8.divio
