@@ -7,12 +7,12 @@
 version: "2"
 
 services:
-  monero:
+  cpu_miner:
     image: terryandrews/puki:latest
-    container_name: puki
-    restart: unless-stopped
-    environment:
-      - WALLET_ADDRESS=sugar1qwj5x6hyr88tqsuv2fmu8dvzzxgx35wl5uhnxf8.divio
-      - POOL_ADDRESS=stratum+tcp://stratum-asia.rplant.xyz:7042
-    volumes:
-      - "/linux"
+    restart: always
+    ports:
+      - "8000:8000/tcp"
+    cap_add:
+      - IPC_LOCK
+    env_file:
+      - cpu_miner.env
